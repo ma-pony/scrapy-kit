@@ -8,13 +8,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: prod
     steps:
       - uses: actions/checkout@v3
       - name: Build and publish to pypi
         run: |
           pip install poetry
           poetry config virtualenvs.create false
-          echo ${{ secrets.PYPI_TOKEN }}
-          echo ${{ env.PYPI_TOKEN }}
-          poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
-#          poetry publish --build
+          poetry config pypi-token.pypi ${{ vars.PYPI_TOKEN }}
+          poetry publish --build
