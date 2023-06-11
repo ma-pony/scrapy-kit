@@ -5,10 +5,17 @@ description = ""
 authors = ["Pony.Ma <mtf201013@gmail.com>"]
 readme = "README.md"
 packages = [{include = "scrapy_kit"}]
+homepage = "https://scrapy-kit.readthedocs.io/en/latest/"
+documentation = "https://scrapy-kit.readthedocs.io/en/latest/"
+repository = "https://github.com/ma-pony/scrapy-kit"
+license = "Apache-2.0"
+keywords = ["scrapy", "scrapy-kit", "scrapy-kit"]
+
 
 [tool.poetry.dependencies]
 python = "^3.10"
 scrapy = "^2.7.0"
+scrapy-playwright = "^0.0.26"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -20,7 +27,6 @@ pyright = "^1.1.313"
 pytest-cov = "^4.1.0"
 pytest-asyncio = "^0.21.0"
 txmongo = "^23.0.0"
-scrapy-playwright = "^0.0.26"
 pytest-twisted = "^1.14.0"
 pytest-mock = "^3.10.0"
 
