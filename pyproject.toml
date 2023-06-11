@@ -24,7 +24,7 @@ scrapy-playwright = "^0.0.26"
 pytest-twisted = "^1.14.0"
 pytest-mock = "^3.10.0"
 
-[tool.poetry.group.doc.dependencies]
+[tool.poetry.group.docs.dependencies]
 mkdocs = "^1.4.3"
 mkdocs-literate-nav = "^0.6.0"
 mkdocs-minify-plugin = "^0.6.4"
