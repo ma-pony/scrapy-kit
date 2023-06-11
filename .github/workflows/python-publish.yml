@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build and publish to pypi
-      - run: |
+        run: |
           pip install poetry
           poetry config virtualenvs.create false
           echo ${{ secrets.PYPI_TOKEN }}
