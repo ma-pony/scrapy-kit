@@ -9,6 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build and publish to pypi
-        uses: JRubics/poetry-publish@v1.17
-        with:
-          pypi_token: ${{ env.PYPI_TOKEN }}
+        run: |
+          pip install poetry
+          poetry config virtualenvs.create false
+          poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
+          poetry publish --build
