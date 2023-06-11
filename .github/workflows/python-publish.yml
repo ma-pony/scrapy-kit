@@ -11,24 +11,22 @@ jobs:
     environment: prod
     steps:
       - uses: actions/checkout@v3
-      - name: pip install
+      - name: Install poetry
         run: |
           pip install poetry
           poetry config virtualenvs.create false
+      - name: Commit Tag
+        run: |
+          poetry version patch
+          tag=$(poetry version | grep -Eo "[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+")
+          git add .
+          git commit -m "Bump version to v${tag}"
+          git tag "v$tag"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
-        run: |
-          git config --global user.email "mtf201013@gmail.com"
-          git config --global user.name "Pony Ma"
-          poetry version patch
-          version=$(poetry version | grep -Eo "[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+")
-          git add .
-          git commit -m "Bump version to v${version}"
-          git tag v${version};
-          git push --tags
       - name: Build and publish to pypi
         run: |
           poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
