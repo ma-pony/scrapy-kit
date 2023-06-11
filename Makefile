@@ -39,6 +39,6 @@ tag:
 	poetry version patch
 	version=$$(poetry version | grep -Eo "[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+"); \
 	git add pyproject.toml; \
-	git commit -m "Bump version to $${version}"; \
-	git tag $${version}; \
+	git commit -m "Bump version to v$${version}"; \
+	git tag v$${version}; \
 	git push origin main --tags
