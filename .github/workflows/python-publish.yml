@@ -17,4 +17,4 @@ jobs:
           echo ${{ secrets.PYPI_TOKEN }}
           echo ${{ env.PYPI_TOKEN }}
           poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
-          poetry publish --build
+#          poetry publish --build
