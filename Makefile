@@ -24,7 +24,7 @@ export_requirements:
 	@echo "Exporting requirements..."
 	poetry export --without-hashes -f requirements.txt --output requirements.txt
 	poetry export --without-hashes -f requirements.txt --output requirements-dev.txt --with dev
-	poetry export --without-hashes -f requirements.txt --output deploy/docker/requirements.txt --with dev
+	poetry export --without-hashes -f requirements.txt --output requirements-doc.txt --with doc
 
 doc:
 	@echo "Building docs..."
