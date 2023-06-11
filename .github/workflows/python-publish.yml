@@ -21,7 +21,7 @@ jobs:
           git add .
           git commit -m "Bump version to v${version}"
           git tag v${version};
-          git push --tags git@github.com:ma-pony/scrapy-kit.git HEAD:main
+          git push --tags
           poetry config virtualenvs.create false
           poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
           poetry publish --build
