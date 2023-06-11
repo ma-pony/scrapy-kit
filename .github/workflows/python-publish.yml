@@ -1,17 +1,20 @@
 name: Python package
 on:
   push:
-    tags:
-      - "v*.*.*"
+    branches:
+    - main
+#     tags:
+#       - "v*.*.*"
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Build and publish to pypi
-      - run:  pip install poetry
-      - run: poetry config virtualenvs.create false
-      - run: echo ${{ secrets.PYPI_TOKEN }}
-      - run: echo ${{ env.PYPI_TOKEN }}
-      - run: poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
-      - run: poetry publish --build
+      - run: |
+          pip install poetry
+          poetry config virtualenvs.create false
+          echo ${{ secrets.PYPI_TOKEN }}
+          echo ${{ env.PYPI_TOKEN }}
+          poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
+          poetry publish --build
