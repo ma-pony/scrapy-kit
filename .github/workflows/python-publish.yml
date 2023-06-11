@@ -14,7 +14,14 @@ jobs:
       - name: Build and publish to pypi
         run: |
           pip install poetry
-          make tag
+          git config --global user.email "mtf201013@gmail.com"
+          git config --global user.name "Pony Ma"
+          poetry version patch
+          version=$$(poetry version | grep -Eo "[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+"); \
+          git add .
+          git commit -m "Bump version to v$${version}"
+          git tag v$${version};
+          git push --tags git@git.rccchina.com:bs-service/spider-kit.git HEAD:main
           poetry config virtualenvs.create false
           poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
           poetry publish --build
