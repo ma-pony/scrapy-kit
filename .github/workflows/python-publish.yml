@@ -14,6 +14,7 @@ jobs:
       - name: Build and publish to pypi
         run: |
           pip install poetry
+          make tag
           poetry config virtualenvs.create false
           poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
           poetry publish --build
