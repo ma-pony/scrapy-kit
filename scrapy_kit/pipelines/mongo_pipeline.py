@@ -29,7 +29,7 @@ class MongoPipeline:
     how use:
     1. add to settings.py
     ITEM_PIPELINES = {
-        'scrapy_kit.pipelines.mongo_pipeline.MongoPipeline': 300,
+        'scrapy_kit.pipelines.MongoPipeline': 300,
     }
     2. add mongo config to settings.py
     MONGO_URI = "mongodb://username:password@host:port"
