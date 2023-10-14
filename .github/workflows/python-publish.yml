@@ -21,14 +21,15 @@ jobs:
           tag=$(poetry version | grep -Eo "[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+")
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          git tag "v${tag}"
           git add .
           git commit -m "Bump version to v${tag}"
-          git tag "v${tag}"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
+          tags: true
       - name: Build and publish to pypi
         run: |
           poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
