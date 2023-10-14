@@ -16,6 +16,7 @@ keywords = ["scrapy", "scrapy-kit", "scrapy-kit"]
 python = "^3.10"
 scrapy = "^2.7.0"
 scrapy-playwright = "^0.0.26"
+redis = ">=4.6.0"
 
 
 [tool.poetry.group.dev.dependencies]
