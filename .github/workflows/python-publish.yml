@@ -23,7 +23,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add .
           git commit -m "Bump version to v${tag}"
-          git tag "v$tag"
+          git tag "v${tag}"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
