@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "scrapy-kit"
-version = "0.1.10"
+version = "0.1.11"
 description = ""
 authors = ["Pony.Ma <mtf201013@gmail.com>"]
 readme = "README.md"
