@@ -6,5 +6,9 @@ class TestTextEncode:
         garbled_text = "äº¿å…ƒ"
         expected_text = "亿元"
         expected_encoding = "cp1252"
+
         result = fix_encode(garbled_text)
+        assert result == expected_text
+
+        result = fix_encode(garbled_text, return_encoding=True)
         assert result == (expected_text, expected_encoding)
