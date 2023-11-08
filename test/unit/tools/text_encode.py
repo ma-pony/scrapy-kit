@@ -1,4 +1,4 @@
-from spider_tool_kit.tools import fix_encode
+from spider_brew_kit.tools import fix_encode
 
 
 class TestTextEncode:

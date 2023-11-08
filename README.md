@@ -1,11 +1,11 @@
-# spider-tool-kie
+# spider-brew-kit
 
 A library for scrapy tools, including but not limited to the usual pipelines, middlewares, etc.
 
 ## install
 
 ```shell
-pip install spider-tool-kie
+pip install spider-brew-kit
 ```
 
 ## usage
@@ -70,6 +70,6 @@ DOWNLOADER_MIDDLEWARES = {
 
 ```shell
 git clone
-cd spider-tool-kie
+cd spider-brew-kit
 poetry install
 ```

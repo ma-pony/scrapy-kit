@@ -1,6 +1,6 @@
 site_name: "scrapy_kit"
 site_description: "scrapy kit"
-repo_name: "spider-tool-kie/scrapy_kit"
+repo_name: "spider-brew-kit/scrapy_kit"
 watch: [mkdocs.yml, README.md, scrapy_kit]
 
 
