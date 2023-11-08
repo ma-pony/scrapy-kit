@@ -4,7 +4,7 @@ from unittest.mock import ANY, Mock
 import pytest
 from pytest_twisted import ensureDeferred
 
-from scrapy_kit.pipelines.mongo_pipeline import MongoPipeline
+from spider_tool_kit.scrapy.pipelines.mongo_pipeline import MongoPipeline
 
 
 class TestMongoPipeline:

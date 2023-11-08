@@ -1,15 +1,15 @@
 [tool.poetry]
-name = "scrapy-kit"
-version = "0.1.12"
+name = "spider-tool-kit"
+version = "0.1.0"
 description = ""
 authors = ["Pony.Ma <mtf201013@gmail.com>"]
 readme = "README.md"
-packages = [{include = "scrapy_kit"}]
-homepage = "https://scrapy-kit.readthedocs.io/en/latest/"
-documentation = "https://scrapy-kit.readthedocs.io/en/latest/"
-repository = "https://github.com/ma-pony/scrapy-kit"
+packages = [{include = "spider_tool_kit"}]
+homepage = "https://spider-tool-kit.readthedocs.io/en/latest/"
+documentation = "https://spider-tool-kit.readthedocs.io/en/latest/"
+repository = "https://github.com/ma-pony/spider-tool-kit"
 license = "Apache-2.0"
-keywords = ["scrapy", "scrapy-kit", "scrapy-kit"]
+keywords = ["spider", "scrapy", "scrapy-kit", "spider-kit", "spider-tools", "spider-tool-kit"]
 
 
 [tool.poetry.dependencies]
