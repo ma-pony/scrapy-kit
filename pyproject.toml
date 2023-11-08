@@ -9,7 +9,7 @@ homepage = "https://spider-tool-kit.readthedocs.io/en/latest/"
 documentation = "https://spider-tool-kit.readthedocs.io/en/latest/"
 repository = "https://github.com/ma-pony/spider-tool-kit"
 license = "Apache-2.0"
-keywords = ["spider", "scrapy", "scrapy-kit", "spider-kit", "spider-tools", "spider-tool-kit"]
+keywords = ["spider", "scrapy", "spider-tool-kie", "spider-kit", "spider-tools", "spider-tool-kit"]
 
 
 [tool.poetry.dependencies]
