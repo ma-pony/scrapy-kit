@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "spider-brew-kit"
-version = "0.1.5"
+version = "0.1.6"
 description = ""
 authors = ["Pony.Ma <mtf201013@gmail.com>"]
 readme = "README.md"
