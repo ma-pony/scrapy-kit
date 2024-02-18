@@ -1893,21 +1893,21 @@ files = [
 
 [[package]]
 name = "scrapy"
-version = "2.9.0"
+version = "2.11.1"
 description = "A high-level Web Crawling and Web Scraping framework"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 files = [
-    {file = "Scrapy-2.9.0-py2.py3-none-any.whl", hash = "sha256:908fdb7874d235230a16fa288637e3f673813cf27fb177f589b5a22bad00b0f9"},
-    {file = "Scrapy-2.9.0.tar.gz", hash = "sha256:564c972b56e54b83141f395ce3f6a25bfe2093d61d13f9b81d05384e19db98da"},
+    {file = "Scrapy-2.11.1-py2.py3-none-any.whl", hash = "sha256:f1edee0cd214512054c01a8d031a8d213dddb53492b02c9e66256e3efe90d175"},
+    {file = "Scrapy-2.11.1.tar.gz", hash = "sha256:733a039c7423e52b69bf2810b5332093d4e42a848460359c07b02ecff8f73ebe"},
 ]
 
 [package.dependencies]
-cryptography = ">=3.4.6"
+cryptography = ">=36.0.0"
 cssselect = ">=0.9.1"
 itemadapter = ">=0.1.0"
 itemloaders = ">=1.0.1"
-lxml = ">=4.3.0"
+lxml = ">=4.4.1"
 packaging = "*"
 parsel = ">=1.5.0"
 protego = ">=0.1.15"
